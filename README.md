@@ -6,3 +6,9 @@ A little test with anime.js.
 
 What is [anime.js](https://animejs.com/) ?
 
+What it has:
+- Translation
+- Fade
+- Random rotation
+- Random translation
+
