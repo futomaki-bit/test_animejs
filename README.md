@@ -4,11 +4,11 @@ A little test with anime.js.
 
 [Link](https://futomakiyoin.github.io/test_animejs/)
 
-What is [anime.js](https://animejs.com/) ?
+**What is [anime.js](https://animejs.com/) ?**
 
-What it has:
-- Translation
-- Fade
+### Tested: ###
+- Translations
+- Fade-in
 - Random rotation
 - Random translation
 
