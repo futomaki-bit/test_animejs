@@ -2,7 +2,7 @@
 // it will move in x and y axes and rotate to make it more realistic
 let scatter = anime.set('.scattered', {
     translateX: function () {
-        return anime.random(200, 200);
+        return anime.random(-200, 200);
     },
     translateY: function () {
         return anime.random(-200, 200);
