@@ -47,44 +47,8 @@
       </div>
     </footer>
   </div>
-  <script>
-    let world = anime({
-      targets: '.world',
-      translateX: [-1000, 0],
-      translateZ: 0,
-      opacity: [0, 1],
-      easing: "easeOutExpo",
-      duration: 1500,
-      delay: 500
-    })
-    let you = anime({
-      targets: '.you',
-      translateX: [1000, 0],
-      translateZ: 0,
-      opacity: [0, 1],
-      easing: "easeOutExpo",
-      duration: 1500,
-      delay: 1000
-    });
-    let other = anime({
-      targets: '.other',
-      opacity: [0, 1],
-      easing: "easeOutExpo",
-      duration: 3000,
-      delay: 2000
-    });
-    let scatter = anime.set('.scattered', {
-      translateX: function () {
-        return anime.random(200, 200);
-      },
-      translateY: function () {
-        return anime.random(-200, 200);
-      },
-      rotate: function () {
-        return anime.random(-90, 90);
-      },
-    });
-  </script>
+  <script src="./js/animate.js"></script>
+
 </body>
 
 </html>
