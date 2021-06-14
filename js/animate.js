@@ -11,32 +11,32 @@ let scatter = anime.set('.scattered', {
         return anime.random(-90, 90);
     },
 });
-// transition from -1000 (left) to 0 (center)
-let world = anime({
-    targets: '.world',
-    translateX: [-1000, 0],
-    translateZ: 0,
-    opacity: [0, 1],
-    easing: "easeOutExpo",
-    duration: 1500,
-    delay: 500
-})
-// Opposite of 'world', transition from 1000 (right) to 0 (center)
-let you = anime({
-    targets: '.you',
-    translateX: [1000, 0],
-    translateZ: 0,
-    opacity: [0, 1],
-    easing: "easeOutExpo",
-    duration: 1500,
-    delay: 1000
-});
 
-// Small fade in animation after the other
-let other = anime({
-    targets: '.other',
-    opacity: [0, 1],
+const SLIDEDURATION = 1000;
+const OFFSET = 1000
+const FADEIN = [0, 1]
+
+anime.timeline().add({
+    // transition from -1000 (left) to 0 (center)
+    targets: '.world',
+    translateX: [-OFFSET, 0],
+    translateZ: 0,
+    opacity: FADEIN,
     easing: "easeOutExpo",
-    duration: 3000,
-    delay: 2000
+    duration: SLIDEDURATION,
+}).add({
+    // transition from -1000 (left) to 0 (center)
+    targets: '.you',
+    translateX: [OFFSET, 0],
+    translateZ: 0,
+    opacity: FADEIN,
+    easing: "easeOutExpo",
+    duration: SLIDEDURATION,
+}).add({
+    // fade in other text
+    targets: '.other',
+    opacity: FADEIN,
+    easing: "easeOutExpo",
+    duration: 2 * SLIDEDURATION,
+    delay: 0
 });
