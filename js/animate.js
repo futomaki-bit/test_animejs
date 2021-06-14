@@ -12,7 +12,7 @@ let scatter = anime.set('.scattered', {
     },
 });
 
-const SLIDEDURATION = 1000;
+const SLIDEDURATION = 1500;
 const OFFSET = 1000
 const FADEIN = [0, 1]
 
